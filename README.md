@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Goodiec/project-ml-microservice-kubernetes/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Goodiec/project-ml-microservice-kubernetes/tree/main)
 
 ## Project Overview
 
@@ -22,7 +22,16 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 **The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
 ---
+## Project Files
+- [app.py](app.py) - The app.py conatins the source code for the application.
+- [makefile](./Makefile) - The makefile contains instructions for building the application. It is used to automate the process of setting a virtual environment for the project, installing dependencies, running the tests, and linting the files.
+- [Dockerfile](Dockerfile) - The dockerfile contains instructions for building the image.
+- [.circleci](.circleci/config.yml) - The circleci config file is used for setting up the ci process on circleci.
+- [run_docker.sh](run_docker.sh) - The run_docker.sh script contains instructions for building the app's Docker image. It runs the Dockerfile, and then starts a container from the image that has been built.
+- [upload_docker.sh](upload_docker.sh) - The upload_docker.sh script contains instructions to tag the image that was built with the run_docker.sh file and upload the image to Docker Hub.
+- [run_kubernetes.sh](run_kubernetes.sh) - The run_kubernetes.sh is responsible for creating a container in a kubernetes cluster using the docker image that was uploaded to Docker Hub.
 
+---
 ## Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
